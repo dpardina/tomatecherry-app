@@ -1,0 +1,18 @@
+/* Colors */
+@import 'colors';
+/* CartIcon */
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+#lblCartCount {
+    font-size: 12px;
+    background: $carticon-background;
+    color: $secondary;
+    padding: 1px 6px;
+    vertical-align: top;
+    margin-left: -10px; 
+}

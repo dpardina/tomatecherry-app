@@ -1,0 +1,29 @@
+/* Colors */
+@import 'colors';
+/* Home */
+.banner {
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    .row {
+        min-height: 600px;
+        height: calc(100vh);
+        .phrase {
+            top: 5%;
+            background: rgba(255, 255, 255, 0.800);
+            padding: 1.5rem;
+        }
+    }
+    h1 {
+        font-family: 'Stalemate', cursive;
+        color: $primary;
+        font-size: 5rem;
+    }
+    h2 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: $primary;
+        font-size: 2rem;
+    }
+}

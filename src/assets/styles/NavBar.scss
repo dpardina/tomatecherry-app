@@ -1,0 +1,87 @@
+/* Colors */
+@import 'colors';
+/* NavBar */
+.navbar {
+    background-color: $background;
+    .navbar-toggler {
+        border-color: $primary;
+        float: right;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+    .navbar-nav {
+        .dropdown-toggle {
+            color: $primary;
+        }
+        .dropdown-menu {
+            color: $primary;
+            border: 0.1rem solid $primary;
+            border-radius: 0;
+            .dropdown-item {
+                color: $primary;
+                &:hover {
+                    background-color: $details;
+                    color: $secondary;
+                }
+            }
+        }
+        .nav-link span {
+            color: $primary;
+            position: relative;
+            transition: 0.2s;
+            font-size: 1.1rem;
+            font-weight: 700;
+            &:hover {
+                color: $primary;
+                &:after {
+                    width: 100%;
+                    position: absolute;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                bottom: -0.5rem;
+                background-color: $details;
+                width: 0;
+                height: 0.25rem;
+                transition: all 0.4s;
+            }
+        }
+        .user-icon {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.3em;
+            color: $primary;
+            transition: 0.5s;
+            &:hover {
+                color: $secondary;       
+                &:before {
+                    transform: scale(1);
+                }
+            } 
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $details;
+                border-radius: 50%;
+                z-index: -1;
+                transform: scale(0);
+                transition: 0.5s;
+            }
+        }
+    }
+}
