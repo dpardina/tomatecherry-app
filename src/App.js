@@ -1,13 +1,13 @@
 import React from 'react';
 import './assets/styles/App.scss';
 import Navbar from "./components/NavBar";
-import Greeting from "./components/Home";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Greeting />
+      <Home greeting1="De nuestra casa" greeting2="a la tuya" />
     </div>
   );
 }
