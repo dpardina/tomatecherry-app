@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemCounter from "./ItemCounter"
+import ItemCount from "./ItemCount"
 import '../assets/styles/Home.scss';
 import chocotorta from '../assets/img/chocotortabrownie.jpg';
 import mixbrownie from '../assets/img/mix-brownie.jpg';
@@ -36,7 +36,7 @@ function Home(props) {
                             <h4 className="card-title p-2">Chocotorta Brownie</h4>
                             <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
                                 <h5 className="card-text">$1.170 por Unidad</h5>
-                                <ItemCounter />
+                                <ItemCount initial="0" min="0" max="10" />
                             </div>
                         </div>
                         <div className="card text-center col-12 col-md-4 mb-5">
@@ -44,7 +44,7 @@ function Home(props) {
                             <h4 className="card-title p-2"><span style={{color: '#f75e5e', backgroundColor: 'white', padding: '1px 20px'}}><b>PROMO</b></span> Mix Brownies</h4>
                             <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
                                 <h5 className="card-text">$590 por Unidad</h5>
-                                <ItemCounter />
+                                <ItemCount initial="0" min="0" max="10" />
                             </div>
                         </div>
                         <div className="card text-center col-12 col-md-4 mb-5">
@@ -52,7 +52,7 @@ function Home(props) {
                             <h4 className="card-title p-2">Cherrymix</h4>
                             <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
                                 <h5 className="card-text">$700 por Unidad</h5>
-                                <ItemCounter />
+                                <ItemCount initial="0" min="0" max="10" />
                             </div>
                         </div>
                     </div>
