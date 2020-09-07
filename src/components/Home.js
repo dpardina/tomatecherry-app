@@ -1,11 +1,12 @@
 import React from 'react';
-import ItemCount from "./ItemCount"
+// import ItemCount from "./ItemCount";
+import ItemList from "./ItemList"
 import '../assets/styles/Home.scss';
-import chocotorta from '../assets/img/chocotortabrownie.jpg';
-import mixbrownie from '../assets/img/mix-brownie.jpg';
-import cherrymix from '../assets/img/cherrymix.jpg';
+// import chocotorta from '../assets/img/chocotortabrownie.jpg';
+// import mixbrownie from '../assets/img/mix-brownie.jpg';
+// import cherrymix from '../assets/img/cherrymix.jpg';
 
-function Home(props) {
+export default function Home(props) {
     return (
         <div id="home">
 
@@ -14,7 +15,7 @@ function Home(props) {
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-md-7 text-center phrase">
-                            <h1 className="mb-4">{props.greeting1}<br />{props.greeting2}</h1>
+                            <h1 className="mb-4">De nuestra casa<br/>a la tuya</h1>
                             <h2 className="pt-4">A un click de distancia</h2>
                             <a href="productos.hmtl" className="btn" target="_blank">Comprar</a>
                         </div>
@@ -31,7 +32,7 @@ function Home(props) {
                         </div>
                     </div>
                     <div className="carousel row">
-                        <div className="card text-center col-12 col-md-4 mb-5">
+                        {/* <div className="card text-center col-12 col-md-4 mb-5">
                             <img src={chocotorta} className="card-img-top" alt="Chocotorta" />
                             <h4 className="card-title p-2">Chocotorta Brownie</h4>
                             <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
@@ -54,7 +55,8 @@ function Home(props) {
                                 <h5 className="card-text">$700 por Unidad</h5>
                                 <ItemCount initial="0" min="0" max="10" />
                             </div>
-                        </div>
+                        </div> */}
+                        <ItemList />
                     </div>
                 </div>
             </div>
@@ -62,5 +64,3 @@ function Home(props) {
         </div>
     );
 }
-
-export default Home;

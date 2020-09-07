@@ -1,7 +1,8 @@
 import React from 'react';
-import '../assets/styles/NavBar.scss';
-import CartIcon from "./CartIcon"
-import logo from '../assets/img/logo.png';
+import '../../assets/styles/NavBar.scss';
+import CartIcon from "./CartIcon";
+import WishlistIcon from "./WishlistIcon";
+import logo from '../../assets/img/logo.png';
 
 class Navbar extends React.Component {
     render() {
@@ -42,10 +43,10 @@ class Navbar extends React.Component {
                                     <a className="nav-link user-icon" href="user.html"><i className="fas fa-user" /></a>
                                 </li>
                                 <li className="nav-item px-2">
-                                    <a className="nav-link user-icon" href="wishlist.html"><i className="fas fa-heart" /></a>
+                                    <a className="nav-link user-icon" href="wishlist.html"><WishlistIcon numberItemsWishAdded="" /></a>
                                 </li>
                                 <li className="nav-item px-2">
-                                    <a className="nav-link user-icon" href="shopping-cart.html"><CartIcon /></a>
+                                    <a className="nav-link user-icon" href="shopping-cart.html"><CartIcon numberItemsAdded="5" /></a>
                                 </li>
                             </ul>
                         </div>
