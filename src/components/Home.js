@@ -27,9 +27,7 @@ export default function Home(props) {
                             <h2>Productos Destacados</h2>
                         </div>
                     </div>
-                    <div className="carousel row">
-                        <ItemList />
-                    </div>
+                    <ItemList />
                 </div>
             </div>
 
