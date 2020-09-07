@@ -1,10 +1,6 @@
 import React from 'react';
-// import ItemCount from "./ItemCount";
 import ItemList from "./ItemList"
 import '../assets/styles/Home.scss';
-// import chocotorta from '../assets/img/chocotortabrownie.jpg';
-// import mixbrownie from '../assets/img/mix-brownie.jpg';
-// import cherrymix from '../assets/img/cherrymix.jpg';
 
 export default function Home(props) {
     return (
@@ -32,30 +28,6 @@ export default function Home(props) {
                         </div>
                     </div>
                     <div className="carousel row">
-                        {/* <div className="card text-center col-12 col-md-4 mb-5">
-                            <img src={chocotorta} className="card-img-top" alt="Chocotorta" />
-                            <h4 className="card-title p-2">Chocotorta Brownie</h4>
-                            <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
-                                <h5 className="card-text">$1.170 por Unidad</h5>
-                                <ItemCount initial="0" min="0" max="10" />
-                            </div>
-                        </div>
-                        <div className="card text-center col-12 col-md-4 mb-5">
-                            <img src={mixbrownie} className="card-img-top" alt="Mix Brownies" />
-                            <h4 className="card-title p-2"><span style={{color: '#f75e5e', backgroundColor: 'white', padding: '1px 20px'}}><b>PROMO</b></span> Mix Brownies</h4>
-                            <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
-                                <h5 className="card-text">$590 por Unidad</h5>
-                                <ItemCount initial="0" min="0" max="10" />
-                            </div>
-                        </div>
-                        <div className="card text-center col-12 col-md-4 mb-5">
-                            <img src={cherrymix} className="card-img-top" alt="Cherrymix" />
-                            <h4 className="card-title p-2">Cherrymix</h4>
-                            <div className="d-flex flex-wrap justify-content-around align-items-center p-2 torta-precio">
-                                <h5 className="card-text">$700 por Unidad</h5>
-                                <ItemCount initial="0" min="0" max="10" />
-                            </div>
-                        </div> */}
                         <ItemList />
                     </div>
                 </div>
