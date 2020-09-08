@@ -14,4 +14,8 @@ const task = new Promise((resolve, reject) => {
     }, 2000);
 });
 
+task.then((result) => {
+    
+});
+
 export default products;
