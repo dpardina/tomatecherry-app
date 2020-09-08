@@ -2,9 +2,9 @@ import chocotorta from '../assets/img/chocotortabrownie.jpg';
 import mixbrownie from '../assets/img/mix-brownie.jpg';
 import cherrymix from '../assets/img/cherrymix.jpg';
 
-const task = new Promise((resolve, reject) => {
+const Products = new Promise((resolve, reject) => {
 
-    setTimeout(() => {
+    const listProducts = setTimeout(() => {
         const products = [
             {id: '1', name: 'Chocotorta Brownie', price: 1170, stock: 5, image: chocotorta},
             {id: '2', name: 'Mix Brownies', price: 590, stock: 10, image: mixbrownie},
@@ -12,10 +12,16 @@ const task = new Promise((resolve, reject) => {
         ]
         resolve(products);
     }, 2000);
+    return listProducts
 });
 
-task.then((result) => {
-    console.log(result)
-});
+Products.then((res) => {
+    const products = res;
+    console.log('OK');
+    return products;
+})
+.catch((err) => {
+    console.log('Error');
+})
 
-export default products;
+export default Products;
