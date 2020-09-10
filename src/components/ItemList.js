@@ -7,10 +7,9 @@ export default function ItemList() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        const listProducts = async () => await Products;
-        return listProducts
+        Products
         .then(res => {
-            setData(res.results);
+            setData(res);
         })
     }, [])
 
