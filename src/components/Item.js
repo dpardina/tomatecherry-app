@@ -16,9 +16,8 @@ const Products = new Promise((resolve, reject) => {
 });
 
 Products.then((res) => {
-    const products = res;
-    console.log('OK');
-    return products;
+    console.log(res);
+    return res;
 })
 .catch((err) => {
     console.log('Error');
