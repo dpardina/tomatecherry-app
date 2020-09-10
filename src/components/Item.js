@@ -20,7 +20,7 @@ Products.then((res) => {
     return res;
 })
 .catch((err) => {
-    console.log('Error');
+    console.log('Datos no encontrados.');
 })
 
 export default Products;
