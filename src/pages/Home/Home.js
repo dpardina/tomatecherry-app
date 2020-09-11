@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemList from "./ItemList"
-import '../assets/styles/Home.scss';
+import Item from "../../components/Item/Item"
+import './Home.scss';
 
 export default function Home(props) {
     return (
@@ -27,7 +27,7 @@ export default function Home(props) {
                             <h2>Productos Destacados</h2>
                         </div>
                     </div>
-                    <ItemList />
+                    <Item />
                 </div>
             </div>
 

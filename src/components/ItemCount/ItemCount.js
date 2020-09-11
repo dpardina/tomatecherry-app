@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import '../assets/styles/ItemCount.scss';
+import './ItemCount.scss';
 
 export default function ItemCount(props) {
 

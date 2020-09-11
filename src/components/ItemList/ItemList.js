@@ -1,6 +1,6 @@
-import chocotorta from '../assets/img/chocotortabrownie.jpg';
-import mixbrownie from '../assets/img/mix-brownie.jpg';
-import cherrymix from '../assets/img/cherrymix.jpg';
+import chocotorta from '../../assets/img/chocotortabrownie.jpg';
+import mixbrownie from '../../assets/img/mix-brownie.jpg';
+import cherrymix from '../../assets/img/cherrymix.jpg';
 
 const Products = new Promise((resolve, reject) => {
 

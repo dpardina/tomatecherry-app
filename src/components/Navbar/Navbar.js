@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../assets/styles/NavBar.scss';
-import CartIcon from "./CartIcon";
-import WishlistIcon from "./WishlistIcon";
+import CartIcon from "../CartIcon/CartIcon";
+import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import logo from '../../assets/img/logo.png';
+import './NavBar.scss';
 
 class Navbar extends React.Component {
     render() {
@@ -17,7 +17,9 @@ class Navbar extends React.Component {
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul className="navbar-nav mr-auto text-center text-uppercase">
                                 <li className="nav-item px-2 dropdown">
-                                    <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="productos.html" role="button" aria-haspopup="true" aria-expanded="false"><span>Productos</span></a>
+                                    <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="productos.html" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span>Productos</span>
+                                    </a>
                                     <div className="dropdown-menu">
                                         <a className="dropdown-item" href="tortas-y-tartas.html">Tortas y Tartas</a>
                                         <a className="dropdown-item" href="cookies-y-alfajores.html">Cookies y Alfajores</a>
@@ -32,21 +34,31 @@ class Navbar extends React.Component {
                                     </div>
                                 </li>
                                 <li className="nav-item px-2">
-                                    <a className="nav-link" href="nosotras.html"><span>Nosotras</span></a>
+                                    <a className="nav-link" href="nosotras.html">
+                                        <span>Nosotras</span>
+                                    </a>
                                 </li>
                                 <li className="nav-item px-2">
-                                    <a className="nav-link" href="contacto.html"><span>Contacto</span></a>
+                                    <a className="nav-link" href="contacto.html">
+                                        <span>Contacto</span>
+                                    </a>
                                 </li>
                             </ul>
                             <ul className="navbar-nav flex-row justify-content-around">
                                 <li className="nav-item px-2">
-                                    <a className="nav-link user-icon" href="user.html"><i className="fas fa-user" /></a>
+                                    <a className="nav-link user-icon" href="user.html">
+                                        <i className="fas fa-user" />
+                                    </a>
                                 </li>
                                 <li className="nav-item px-2">
-                                    <a className="nav-link user-icon" href="wishlist.html"><WishlistIcon numberItemsWishAdded="" /></a>
+                                    <a className="nav-link user-icon" href="wishlist.html">
+                                        <WishlistIcon numberItemsWishAdded="" />
+                                    </a>
                                 </li>
                                 <li className="nav-item px-2">
-                                    <a className="nav-link user-icon" href="shopping-cart.html"><CartIcon numberItemsAdded="5" /></a>
+                                    <a className="nav-link user-icon" href="shopping-cart.html">
+                                        <CartIcon numberItemsAdded="5" />
+                                    </a>
                                 </li>
                             </ul>
                         </div>

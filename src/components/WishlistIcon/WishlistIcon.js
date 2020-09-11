@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/WishlistIcon.scss';
+import './WishlistIcon.scss';
 
 function WishlistIcon(props) {
     return (

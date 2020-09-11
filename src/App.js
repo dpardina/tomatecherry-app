@@ -1,13 +1,27 @@
 import React from 'react';
-import './assets/styles/App.scss';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home";
+import Home from "./pages/Home/Home";
+import Cart from "./pages/Cart/Cart";
+import Wishlist from "./pages/Wishlist/Wishlist";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/wishlist">
+          <Wishlist />
+        </Route>
+      </BrowserRouter>
     </div>
   );
 }

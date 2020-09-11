@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ItemCount from "./ItemCount";
-import Products from './Item';
+import ItemCount from "../ItemCount/ItemCount";
+import Products from '../ItemList/ItemList';
 
 export default function ItemList() {
 
@@ -30,3 +30,4 @@ export default function ItemList() {
         </div>
     )
 }
+
