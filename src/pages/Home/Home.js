@@ -1,8 +1,8 @@
 import React from 'react';
-import Item from "../../components/Item/Item"
+import ItemList from "../../components/ItemList/ItemList";
 import './Home.scss';
 
-export default function Home(props) {
+const Home = ({ onAdd }) => {
     return (
         <div id="home">
 
@@ -27,10 +27,12 @@ export default function Home(props) {
                             <h2>Productos Destacados</h2>
                         </div>
                     </div>
-                    <Item />
+                    <ItemList onAdd={onAdd} />
                 </div>
             </div>
 
         </div>
     );
 }
+
+export default Home;

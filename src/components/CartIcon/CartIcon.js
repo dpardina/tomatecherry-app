@@ -1,12 +1,12 @@
 import React from 'react';
 import './CartIcon.scss';
 
-function CartIcon(props) {
+const CartIcon = ({ items }) => {
     return (
         <div className="cart-icon-container">
             <i className="fas fa-shopping-cart" />
-            <span className="badge" id="lblCartCount"> 
-                {props.numberItemsAdded}
+            <span className="badge" id="lblCartCount">
+                {items}
             </span>
         </div>
     )

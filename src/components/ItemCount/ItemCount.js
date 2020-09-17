@@ -1,46 +1,33 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './ItemCount.scss';
 
-export default function ItemCount(props) {
+const ItemCount = ({ initial, min, max, onAdd }) => {
+  const [counter, setCounter] = useState(initial);
 
-    let [count, setCount] = useState(parseInt(props.initial));
+  const handleIncrement = () => {
+    counter < max ? setCounter(counter + 1) : console.log("Máximo alcanzado");
+  };
 
-    const onAdd = () => {
-        if (count >= props.max) {
-            return;
-        } else {
-            setCount(count+1);
-        }
-    }
+  const handleDecrement = () => {
+    counter > min ? setCounter(counter - 1) : console.log("Mínimo alcanzado");
+  };
 
-    const onRest = () => {
-        if (count <= props.min ) {
-            return;
-        } else {
-            setCount(count-1);
-        }
-    }
+  return (
+    <div className="general-count d-flex justify-content-around pb-3">
+      <div className="count col-4 d-flex justify-content-around">
+        <button onClick={handleDecrement}>-</button>
+        <p>{counter}</p>
+        <button onClick={handleIncrement}>+</button>
+      </div>
+      <button
+        className="btn col-4 text-center"
+        disabled={counter === 0 || counter < 0 ? true : false}
+        onClick={() => onAdd(counter)}
+      >
+        Comprar
+      </button>
+    </div>
+  );
+};
 
-    const itemsAdd = () => {
-        if (count === 0) {
-            alert('No ha ingresado la cantidad a agregar.');
-        } else {
-            console.log(count);
-        }
-    }
-  
-    return (
-        <div className="general-count">
-            <div className="count row mb-1">
-                <button onClick={onRest}>-</button>
-                <div>
-                    <p>{count}</p>
-                </div>
-                <button onClick={onAdd}>+</button>
-            </div>
-            <div>
-            <button onClick={itemsAdd} className="btn row text-center">Agregar</button>
-            </div>
-        </div>
-    );
-}
+export default ItemCount;

@@ -1,52 +1,38 @@
 import React, { useState, useEffect } from "react";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import Loading from "../Loading/Loading";
 
-export default function ItemDetailContainer() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
+const ItemDetailContainer = ({ product, onAdd }) => {
+  const [item, setItem] = useState();
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setLoading(true);
-        fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1055&limit=5')
-        .then(response => {
-        return response.json();
-        })
-        .then(res => {
-        setData(res.results);
-        setLoading(false);
-        })
-    }, [])
+  const getProduct = () => {
+    return new Promise((res, rej) => {
+      setTimeout(() => {
+        res(product);
+      }, 3000);
+    });
+  };
 
   useEffect(() => {
-    console.log(data);
-  }, [data])
+    getProduct()
+      .then((data) => {
+        setItem(data);
+        setLoading(false);
+      })
+      .catch(() => console.log("rejected"));
+    //  eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  if(loading) {
-    return <div>Loading...</div>
-  }
-  return (
-    <div style={{
-      "display": "flex",
-      "flexDirection": "column", 
-      "flexWrap": "wrap", 
-      "justifyContent": "center", 
-      "alignItems": "center"
-    }}>
-      <ul>
-        {data.map((item) => {
-          return (
-            <div key={item.id}>
-              <h4>{item.title}</h4>
-              <img
-                src={item.thumbnail} 
-                style={{"width": "100px"}}
-              />
-              <p>$ {item.price}</p>
-              <p>product_id: {item.id}</p>
-              <a href={item.permalink}>BUY NOW</a>
-            </div>
-          );
-        })}
-      </ul>
+  return loading ? (
+    <div className="text-center col-12 col-md-4">
+      <Loading text="Cargando..." />
+    </div>
+  ) : (
+    <div className="card text-center col-12 col-md-4">
+      <ItemDetail product={item} onAdd={onAdd} />
     </div>
   );
-}
+};
+
+export default ItemDetailContainer;

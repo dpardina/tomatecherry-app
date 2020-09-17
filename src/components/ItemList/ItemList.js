@@ -1,26 +1,50 @@
-import chocotorta from '../../assets/img/chocotortabrownie.jpg';
-import mixbrownie from '../../assets/img/mix-brownie.jpg';
-import cherrymix from '../../assets/img/cherrymix.jpg';
+import React, { useState, useEffect } from "react";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+import Loading from "../Loading/Loading";
+import dataProducts from "../../data/data";
 
-const Products = new Promise((resolve, reject) => {
+const ItemList = ({ onAdd }) => {
+  const [products, setProducts] = useState();
+  const [loading, setLoading] = useState(true);
 
-    const listProducts = setTimeout(() => {
-        const products = [
-            {id: '1', name: 'Chocotorta Brownie', price: 1170, stock: 5, image: chocotorta},
-            {id: '2', name: 'Mix Brownies', price: 590, stock: 10, image: mixbrownie},
-            {id: '3', name: 'Cherrymix', price: 700, stock: 10, image: cherrymix}
-        ]
-        resolve(products);
-    }, 2000);
-    return listProducts
-});
+  const getProducts = () => {
+    return new Promise((res, rej) => {
+        res(dataProducts);
+    });
+  };
 
-Products.then((res) => {
-    console.log(res);
-    return res;
-})
-.catch((err) => {
-    console.log('Datos no encontrados.');
-})
+  useEffect(() => {
+    getProducts()
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        console.log("rejected");
+      });
+  }, []);
 
-export default Products;
+  return (
+    <div>
+      {loading ? (
+        <Loading text="Cargando..." />
+      ) : (
+      <div className="carousel row">
+        {products.map((product) => {
+          return (
+            <React.Fragment>
+              <ItemDetailContainer
+                key={product.id}
+                product={product}
+                onAdd={onAdd}
+              />
+            </React.Fragment>
+          );
+        })}
+      </div>
+      )}
+    </div>
+  );
+};
+
+export default ItemList;

@@ -1,12 +1,12 @@
 import React from 'react';
 import './WishlistIcon.scss';
 
-function WishlistIcon(props) {
+const WishlistIcon = () => {
     return (
         <div>
             <i className="fas fa-heart" />
             <span className="badge" id="lblWishCount"> 
-                {props.numberItemsWishAdded}
+                
             </span>
         </div>
     )
