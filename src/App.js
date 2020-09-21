@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
-import Product from "./components/ItemDetailTest/Product";
+import Product from "./components/Product/Product";
 
 function App() {
   // Contador del carrito
@@ -24,7 +24,7 @@ function App() {
             <Home onAdd={onAdd} />
           </Route>
           <Route path='/product/:id'>
-            <Product />
+            <Product onAdd={onAdd} />
           </Route>
           <Route path='/cart'>
             <Cart />
