@@ -33,7 +33,7 @@ const Product = ({ onAdd }) => {
         <Loading text="Cargando..." />
       ) : (
       <div className="carousel row">
-        {products[{id}].map((product) => {
+        {products.map((product) => {
           return (
             <React.Fragment>
               <ItemDetailContainer
