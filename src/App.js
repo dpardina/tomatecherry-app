@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import Cart from "./pages/Cart/Cart";
+import Wishlist from "./pages/Wishlist/Wishlist";
+import Product from "./components/ItemDetailTest/Product";
 
 function App() {
   // Contador del carrito
@@ -13,8 +17,23 @@ function App() {
 
   return (
     <div>
-      <Navbar items={items} />
-      <Home onAdd={onAdd} />
+      <BrowserRouter>
+        <Navbar items={items} />
+        <Switch>
+          <Route exact path='/'>
+            <Home onAdd={onAdd} />
+          </Route>
+          <Route path='/tortasytartas/:name'>
+            <Product />
+          </Route>
+          <Route path='/cart'>
+            <Cart />
+          </Route>
+          <Route path='/wishlist'>
+            <Wishlist />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

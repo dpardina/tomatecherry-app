@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartIcon from "../CartIcon/CartIcon";
 import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import logo from '../../assets/img/logo.png';
@@ -8,7 +9,9 @@ const Navbar = ({ items }) => {
     return (
         <nav className="navbar navbar-expand-lg fixed-top" id="nav">
             <div className="container">
-                <a className="navbar-brand" href="index.html"><img src={logo} style={{width: '3.5rem'}} alt="Logo Tomate Cherry" /></a>
+                <NavLink to={'/'} className="navbar-brand">
+                    <img src={logo} style={{width: '3.5rem'}} alt="Logo Tomate Cherry" />
+                </NavLink>
                 <button className="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
                     <span className="navbar-toggler-icon" />
                 </button>            
@@ -21,15 +24,15 @@ const Navbar = ({ items }) => {
                                 </a>
                                 <div className="dropdown-menu">
                                     <a className="dropdown-item" href="tortas-y-tartas.html">Tortas y Tartas</a>
-                                    <a className="dropdown-item" href="cookies-y-alfajores.html">Cookies y Alfajores</a>
-                                    <a className="dropdown-item" href="budines-y-muffins.html">Budines y Muffins</a>
-                                    <a className="dropdown-item" href="cuadrados.html">Cuadrados</a>
-                                    <a className="dropdown-item" href="panaderia.html">Panadería</a>
+                                    <a className="dropdown-item disabled" href="cookies-y-alfajores.html">Cookies y Alfajores</a>
+                                    <a className="dropdown-item disabled" href="budines-y-muffins.html">Budines y Muffins</a>
+                                    <a className="dropdown-item disabled" href="cuadrados.html">Cuadrados</a>
+                                    <a className="dropdown-item disabled" href="panaderia.html">Panadería</a>
                                     <div className="dropdown-divider" />
-                                    <a className="dropdown-item" href="cherry-mix.html">Cherry Mix</a>
-                                    <a className="dropdown-item" href="desayunos.html">Desayunos</a>
-                                    <a className="dropdown-item" href="kits.html">Kits</a>
-                                    <a className="dropdown-item" href="mesa-dulce.html">Mesa Dulce</a>
+                                    <a className="dropdown-item disabled" href="cherry-mix.html">Cherry Mix</a>
+                                    <a className="dropdown-item disabled" href="desayunos.html">Desayunos</a>
+                                    <a className="dropdown-item disabled" href="kits.html">Kits</a>
+                                    <a className="dropdown-item disabled" href="mesa-dulce.html">Mesa Dulce</a>
                                 </div>
                             </li>
                             <li className="nav-item px-2">
@@ -50,14 +53,14 @@ const Navbar = ({ items }) => {
                                 </a>
                             </li>
                             <li className="nav-item px-2">
-                                <a className="nav-link user-icon" href="wishlist.html">
-                                    <WishlistIcon items={items} />
-                                </a>
+                                <NavLink to={'/wishlist'} className="nav-link user-icon">
+                                    <WishlistIcon />
+                                </NavLink>
                             </li>
                             <li className="nav-item px-2">
-                                <a className="nav-link user-icon" href="shopping-cart.html">
+                                <NavLink to={'/cart'} className="nav-link user-icon">
                                     <CartIcon items={items} />
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

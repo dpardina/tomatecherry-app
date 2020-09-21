@@ -25,6 +25,9 @@
                     color: $secondary;
                 }
             }
+            .disabled {
+                color: lightgrey;
+            }
         }
         .nav-link span {
             color: $primary;
