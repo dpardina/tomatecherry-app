@@ -33,8 +33,8 @@ const Product = ({ onAdd }) => {
         <Loading text="Cargando..." />
       ) : (
       <div className="carousel row">
-        {products.map((product) => {
-          return (
+        {products.find((product) => (
+          product.id = id ? (
             <React.Fragment>
               <ItemDetailContainer
                 key={product.id}
@@ -42,8 +42,10 @@ const Product = ({ onAdd }) => {
                 onAdd={onAdd}
               />
             </React.Fragment>
-          );
-        })}
+          ) : (
+            console.log("Producto no encontrado.")
+          )
+        ))}
       </div>
       )}
     </div>
