@@ -33,7 +33,9 @@ const Product = ({ onAdd }) => {
         <Loading text="Cargando..." />
       ) : (
         <div className="carousel row">
-          {products.filter(prod => prod.id === id).map((product) => (
+          {products
+          .filter(product => product.id === id)
+          .map((product) => (
             <ItemDetailContainer
               key={product.id}
               product={product}
