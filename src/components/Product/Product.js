@@ -32,21 +32,16 @@ const Product = ({ onAdd }) => {
       {loading ? (
         <Loading text="Cargando..." />
       ) : (
-      <div className="carousel row">
-        {products.find((product) => (
-          product.id = id ? (
-            <React.Fragment>
+        <div className="carousel row">
+          {products.filter(product => product.id === id).map((prod) => (
               <ItemDetailContainer
-                key={product.id}
-                product={product}
+                key={prod.id}
+                product={prod}
                 onAdd={onAdd}
-              />
-            </React.Fragment>
-          ) : (
-            console.log("Producto no encontrado.")
-          )
-        ))}
-      </div>
+                />
+          ))
+          }
+        </div>
       )}
     </div>
   );
