@@ -27,7 +27,7 @@ function App() {
           <Route path='/tortasytartas'>
             <TortasYTartas onAdd={onAdd} />
           </Route>
-          <Route path='/tortasytartas/:id'>
+          <Route path='/torta/:id'>
             <Product onAdd={onAdd} />
           </Route>
           <Route path='/cart'>
