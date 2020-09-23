@@ -34,11 +34,11 @@ const Product = ({ onAdd }) => {
       ) : (
         <div className="carousel row">
           {products.filter(product => product.id === id).map((prod) => (
-              <ItemDetailContainer
-                key={prod.id}
-                product={prod}
-                onAdd={onAdd}
-                />
+            <ItemDetailContainer
+              key={prod.id}
+              product={prod}
+              onAdd={onAdd}
+            />
           ))
           }
         </div>
