@@ -8,7 +8,7 @@ const Product = ({ onAdd }) => {
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
 
-  const { id } = useParams();
+  let { id } = useParams();
 
   const getProducts = () => {
     return new Promise((res, rej) => {
@@ -33,14 +33,13 @@ const Product = ({ onAdd }) => {
         <Loading text="Cargando..." />
       ) : (
         <div className="carousel row">
-          {products.filter(product => product.id === id).map((prod) => (
+          {products.filter(prod => prod.id === id).map((product) => (
             <ItemDetailContainer
-              key={prod.id}
-              product={prod}
+              key={product.id}
+              product={product}
               onAdd={onAdd}
             />
-          ))
-          }
+          ))}
         </div>
       )}
     </div>

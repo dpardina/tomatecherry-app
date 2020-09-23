@@ -24,7 +24,7 @@ const ItemCount = ({ initial, min, max, onAdd }) => {
         disabled={counter === 0 || counter < 0 ? true : false}
         onClick={() => onAdd(counter)}
       >
-        Comprar
+        Agregar
       </button>
     </div>
   );

@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
+import TortasYTartas from "./pages/Products/TortasYTartas/TortasYTartas";
 import Product from "./components/Product/Product";
 
 function App() {
@@ -23,7 +24,10 @@ function App() {
           <Route exact path='/'>
             <Home onAdd={onAdd} />
           </Route>
-          <Route path='/product/:id'>
+          <Route path='/tortasytartas'>
+            <TortasYTartas onAdd={onAdd} />
+          </Route>
+          <Route path='/tortasytartas/:id'>
             <Product onAdd={onAdd} />
           </Route>
           <Route path='/cart'>

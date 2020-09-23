@@ -3,27 +3,27 @@ import { Images } from "../utils/images";
 const dataProducts = [
   {
     id: 1,
-    name: "Cherry Mix",
-    price: 820,
+    name: "Torta Brownie",
+    price: 1200,
     measure: "Unidad",
     stock: 10,
-    image: Images.CherryMix,
+    image: Images.TortaBrownie,
   },
   {
     id: 2,
     name: "Chocotorta Brownie",
     price: 1350,
     measure: "Unidad",
-    stock: 5,
+    stock: 10,
     image: Images.ChocotortaBrownie,
   },
   {
     id: 3,
-    name: "Mix Brownie",
-    price: 700,
+    name: "Tarta de DDL y Ganache",
+    price: 1200,
     measure: "Unidad",
-    stock: 10,
-    image: Images.MixBrownie,
+    stock: 15,
+    image: Images.DDLGanache,
   },
 ];
 

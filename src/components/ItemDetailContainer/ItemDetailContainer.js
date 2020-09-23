@@ -10,7 +10,7 @@ const ItemDetailContainer = ({ product, onAdd }) => {
     return new Promise((res, rej) => {
       setTimeout(() => {
         res(product);
-      }, 3000);
+      }, 1000);
     });
   };
 

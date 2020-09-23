@@ -6,7 +6,7 @@ const Item = ({ product }) => {
 
   return (
     <React.Fragment>
-      <Link to={{pathname: `/product/${id}`, state: {test:'test'}}}>
+      <Link to={{pathname: `/tortasytartas/${id}`, state: {test:'test'}}}>
       <img src={image} className="card-img-top" alt={name} />
       </Link>
       <h4 className="card-title p-2">{name}</h4>

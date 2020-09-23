@@ -30,17 +30,15 @@ const ItemList = ({ onAdd }) => {
         <Loading text="Cargando..." />
       ) : (
       <div className="carousel row">
-        {products.map((product) => {
-          return (
-            <React.Fragment>
-              <ItemDetailContainer
-                key={product.id}
-                product={product}
-                onAdd={onAdd}
-              />
-            </React.Fragment>
-          );
-        })}
+        {products.map((product) => (
+          <React.Fragment>
+            <ItemDetailContainer
+              key={product.id}
+              product={product}
+              onAdd={onAdd}
+            />
+          </React.Fragment>
+        ))}
       </div>
       )}
     </div>

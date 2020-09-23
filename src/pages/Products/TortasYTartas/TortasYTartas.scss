@@ -1,0 +1,30 @@
+/* Colors */
+@import '../../../assets/styles/colors';
+
+/* Productos */
+#tortasytartas {
+    background-color: white;
+    height: calc(100vh);
+    .productos {
+        position: relative;
+        padding-top: 15vh;
+        .productos-title {
+            padding: 0;
+            margin: 0;
+            h2 {
+                font-family: 'Major Mono Display', monospace;
+                display: inline-block;
+                font-size: 1.5rem;
+                letter-spacing: .2em;
+                color: $primary;
+                font-weight: 700;
+                position: relative;
+                padding-bottom: 0.6rem;
+            }
+            p {
+                color: $primary;
+                padding: 0 0.3rem;
+            }
+        }
+    }
+}
