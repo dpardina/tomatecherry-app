@@ -1,11 +1,11 @@
 /* Colors */
 @import '../../../assets/styles/colors';
 
-/* Productos */
 #tortasytartas {
     .productos {
         position: relative;
         padding-top: 15vh;
+        text-align: center;
         .productos-title {
             padding: 0;
             margin: 0;
@@ -22,6 +22,66 @@
             p {
                 color: $primary;
                 padding: 0 0.3rem;
+            }
+        }
+        .product-grid {
+            border: none;
+            border-radius: 0;
+            .card-img-top {
+                border-radius: 0;
+            }
+            h4 {
+                background-color: $primary;
+                color: $secondary;
+                margin: 0;
+                font-size: 1.4rem;
+            }
+            .precio-producto {
+                background-color: $dbackground;
+                h5 {
+                    font-size: 1.15rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px ) {
+    .productos {
+        .product-grid {
+            h4 {
+                font-size: 0.9rem;
+            }
+            .precio-producto {
+                h5 {
+                    font-size: 0.75rem;
+                    margin-bottom: 5px;
+                }
+                .btn {
+                    padding: 0.5rem;
+                    font-size: 0.90rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px ) {
+    .productos {
+        .product-grid {
+            h4 {
+                font-size: 1.2rem;
+            }
+            .precio-producto {
+                h5 {
+                    font-size: 1rem;
+                    margin-bottom: 5px;
+                }
+                .btn {
+                    padding: 0.8rem 1rem;
+                    font-size: 1rem;
+                }
             }
         }
     }

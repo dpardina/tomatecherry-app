@@ -1,0 +1,41 @@
+/* Colors */
+@import '../../assets/styles/colors';
+
+#productos {
+    position: relative;
+    padding-top: 15vh;
+    text-align: center;
+    .product-item {
+        display: flex;
+        .productos-title {
+            padding: 0;
+            margin: 0;
+            h2 {
+                font-family: 'Major Mono Display', monospace;
+                display: inline-block;
+                font-size: 1.5rem;
+                letter-spacing: .2em;
+                color: $primary;
+                font-weight: 700;
+                position: relative;
+                padding-bottom: 0.6rem;
+            }
+            p {
+                color: $primary;
+                padding: 0 0.3rem;
+            }
+        }
+        .product-detail {
+            img {
+                padding: 0;
+                
+            }
+            .product-info {
+                background-color: $dbackground;
+                .product-description {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

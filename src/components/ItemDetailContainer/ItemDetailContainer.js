@@ -25,13 +25,9 @@ const ItemDetailContainer = ({ product, onAdd }) => {
   }, []);
 
   return loading ? (
-    <div className="text-center col-12 col-md-4">
-      <Loading text="Cargando..." />
-    </div>
+    <Loading text="Cargando..." />
   ) : (
-    <div className="card text-center col-12 col-md-4">
-      <ItemDetail product={item} onAdd={onAdd} />
-    </div>
+    <ItemDetail product={item} onAdd={onAdd} />
   );
 };
 

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import Loading from "../Loading/Loading";
 import dataProducts from "../../data/data";
+import './Product.scss';
 
 const Product = ({ onAdd }) => {
   const [products, setProducts] = useState();
@@ -28,19 +29,20 @@ const Product = ({ onAdd }) => {
   }, []);
 
   return (
-    <div>
+    <div id="productos">
       {loading ? (
         <Loading text="Cargando..." />
       ) : (
-        <div className="carousel row">
+        <div className="product-item mb-5">
           {products
           .filter(product => product.id === id)
           .map((product) => (
-            <ItemDetailContainer
-              key={product.id}
-              product={product}
-              onAdd={onAdd}
-            />
+            <div key={product.id} className="container">
+              <ItemDetailContainer
+                product={product}
+                onAdd={onAdd}
+              />
+            </div>
           ))}
         </div>
       )}

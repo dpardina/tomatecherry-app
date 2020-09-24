@@ -24,10 +24,10 @@ function App() {
           <Route exact path='/'>
             <Home onAdd={onAdd} />
           </Route>
-          <Route path='/tortasytartas'>
+          <Route exact path='/tortasytartas'>
             <TortasYTartas onAdd={onAdd} />
           </Route>
-          <Route path='/torta/:id'>
+          <Route path='/tortasytartas/:id'>
             <Product onAdd={onAdd} />
           </Route>
           <Route path='/cart'>

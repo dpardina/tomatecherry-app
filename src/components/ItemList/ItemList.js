@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+import ItemListGeneral from "../ItemListGeneral/ItemListGeneral";
 import Loading from "../Loading/Loading";
 import dataProducts from "../../data/data";
 
@@ -9,7 +9,9 @@ const ItemList = ({ onAdd }) => {
 
   const getProducts = () => {
     return new Promise((res, rej) => {
+      setTimeout(() => {
         res(dataProducts);
+      }, 2000);
     });
   };
 
@@ -25,23 +27,19 @@ const ItemList = ({ onAdd }) => {
   }, []);
 
   return (
-    <div>
+    <React.Fragment>
       {loading ? (
         <Loading text="Cargando..." />
       ) : (
-      <div className="carousel row">
+      <div className="product-grid row">
         {products.map((product) => (
-          <React.Fragment>
-            <ItemDetailContainer
-              key={product.id}
-              product={product}
-              onAdd={onAdd}
-            />
-          </React.Fragment>
+          <div key={product.id} className="text-center col-12 col-md-4 mb-5">
+            <ItemListGeneral product={product} />
+          </div>
         ))}
       </div>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 

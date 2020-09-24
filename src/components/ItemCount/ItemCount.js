@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './ItemCount.scss';
+import { NavLink } from "react-router-dom";
 
 const ItemCount = ({ initial, min, max, onAdd }) => {
   const [counter, setCounter] = useState(initial);
@@ -13,19 +14,20 @@ const ItemCount = ({ initial, min, max, onAdd }) => {
   };
 
   return (
-    <div className="general-count d-flex justify-content-around pb-3">
-      <div className="count col-4 d-flex justify-content-around">
+    <div className="general-count d-flex flex-column">
+      <div className="count row">
         <button onClick={handleDecrement}>-</button>
         <p>{counter}</p>
         <button onClick={handleIncrement}>+</button>
       </div>
       <button
-        className="btn col-4 text-center"
+        className="btn"
         disabled={counter === 0 || counter < 0 ? true : false}
         onClick={() => onAdd(counter)}
       >
-        Agregar
+        Agregar al carrito
       </button>
+      <NavLink to={{pathname: `/cart`}} className="btn">Comprar</NavLink>
     </div>
   );
 };
