@@ -27,7 +27,7 @@ const ItemCount = ({ initial, min, max, onAdd }) => {
       >
         Agregar al carrito
       </button>
-      <NavLink to={{pathname: `/cart`}} className="btn">Comprar</NavLink>
+      <NavLink to={{pathname: `/cart`}} className="btn">Comprar {counter}</NavLink>
     </div>
   );
 };
