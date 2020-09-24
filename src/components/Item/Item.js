@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({ product, onAdd }) => {
-  const { name, description, price, measure, image } = product;
+  const { name, price, measure, stock, image, description } = product;
 
   return (
     <React.Fragment>
@@ -18,7 +18,7 @@ const Item = ({ product, onAdd }) => {
           <p className="product-description text-justify p-3">{description}</p>
           <h5 className="product-price">${price} por {measure}</h5>
           <div className="product-shop">
-          <ItemCount initial={1} min={0} max={product.stock} onAdd={onAdd} />
+          <ItemCount initial={1} min={0} max={stock} onAdd={onAdd} />
           </div>
         </div>
       </div>

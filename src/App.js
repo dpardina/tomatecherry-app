@@ -11,7 +11,7 @@ function App() {
   // Contador del carrito
   const [items, setItems] = useState(0);
 
-  // Funcion que suma elementos al contador del carrito
+  // Función que suma elementos al contador del carrito
   const onAdd = (counter) => {
     setItems(items + counter);
   };
