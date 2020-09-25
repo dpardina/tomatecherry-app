@@ -1,10 +1,11 @@
 import React from "react";
+import Spinner from 'react-bootstrap/Spinner'
 
 const Loading = ({ text }) => {
   return (
-    <div className="loading">
-      <p>{text}</p>
-    </div>
+    <Spinner animation="grow" variant="dark">
+      <span className="sr-only">{text}</span>
+    </Spinner>
   );
 };
 
