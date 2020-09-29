@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './CartIcon.scss';
+import { CartContext } from '../../context/cartContext';
 
-const CartIcon = ({ items }) => {
+const CartIcon = () => {
+    const [cart] = useContext(CartContext);
     return (
         <div className="cart-icon-container">
             <i className="fas fa-shopping-cart" />
             <span className="badge" id="lblCartCount">
-                {items}
+                {cart.length}
             </span>
         </div>
     )

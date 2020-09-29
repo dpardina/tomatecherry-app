@@ -5,7 +5,7 @@ import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import logo from '../../assets/img/logo.png';
 import './NavBar.scss';
 
-const Navbar = ({ items }) => {
+const Navbar = (props) => {
     return (
         <nav className="navbar navbar-expand-lg fixed-top" id="nav">
             <div className="container">
@@ -59,7 +59,7 @@ const Navbar = ({ items }) => {
                             </li>
                             <li className="nav-item px-2">
                                 <NavLink to={'/cart'} className="nav-link user-icon">
-                                    <CartIcon items={items} />
+                                    <CartIcon />
                                 </NavLink>
                             </li>
                         </ul>

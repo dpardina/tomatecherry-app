@@ -4,10 +4,7 @@ import './TortasYTartas.scss';
 
 const TortasYTartas = ({ onAdd }) => {
     return (
-        <div id="tortasytartas">
-
-            {/* Destacados */}
-            
+        <div id="tortasytartas">   
             <div className="productos mb-5">
                 <div className="container">
                     <div className="row">
@@ -19,7 +16,6 @@ const TortasYTartas = ({ onAdd }) => {
                     <ItemList onAdd={onAdd} />
                 </div>
             </div>
-
         </div>    
     );
 }

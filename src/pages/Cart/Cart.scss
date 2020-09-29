@@ -1,0 +1,28 @@
+/* Colors */
+@import '../../assets/styles/colors';
+
+#cart {
+    position: relative;
+    padding-top: 15vh;
+    text-align: center;
+    .cart-title {
+        h2 {
+            font-family: 'Major Mono Display', monospace;
+            display: inline-block;
+            font-size: 1.5rem;
+            letter-spacing: .2em;
+            color: $primary;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.6rem;
+        }
+    }
+    .item-delete {
+        button {
+            padding: 0;
+            margin: 0;
+            background: none;
+            border: none;
+        }
+    }
+}

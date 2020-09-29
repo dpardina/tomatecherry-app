@@ -5,11 +5,10 @@ import Loading from "../Loading/Loading";
 import dataProducts from "../../data/data";
 import './Product.scss';
 
-const Product = ({ onAdd }) => {
+const Product = () => {
+  const { id } = useParams();
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
-
-  let { id } = useParams();
 
   const getProducts = () => {
     return new Promise((res, rej) => {
@@ -40,7 +39,6 @@ const Product = ({ onAdd }) => {
             <div key={product.id} className="container">
               <ItemDetailContainer
                 product={product}
-                onAdd={onAdd}
               />
             </div>
           ))}
