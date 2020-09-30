@@ -12,7 +12,9 @@ const Product = () => {
 
   const getProducts = () => {
     return new Promise((res, rej) => {
+      setTimeout(() => {
         res(dataProducts);
+      }, 1000);
     });
   };
 

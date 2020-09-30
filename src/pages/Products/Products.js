@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemList from "../../../components/ItemList/ItemList";
-import './TortasYTartas.scss';
+import ItemList from "../../components/ItemList/ItemList";
+import './Products.scss';
 
 const TortasYTartas = ({ onAdd }) => {
     return (

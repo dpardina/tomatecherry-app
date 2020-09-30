@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
-import TortasYTartas from "./pages/Products/TortasYTartas/TortasYTartas";
+import Products from "./pages/Products/Products";
 import Product from "./components/Product/Product";
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/tortasytartas' component={TortasYTartas} />
-            <Route path='/tortasytartas/:id' component={Product} />
+            <Route exact path='/products' component={Products} />
+            <Route path='/products/:id' component={Product} />
             <Route path='/cart' component={Cart} />
             <Route path='/wishlist' component={Wishlist} />
           </Switch>

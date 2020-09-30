@@ -23,7 +23,7 @@ const Navbar = (props) => {
                                     <span>Productos</span>
                                 </a>
                                 <div className="dropdown-menu">
-                                    <NavLink to={'/tortasytartas'} className="dropdown-item">Tortas y Tartas</NavLink>
+                                    <NavLink to={'/products'} className="dropdown-item">Tortas y Tartas</NavLink>
                                     <a className="dropdown-item disabled" href="cookies-y-alfajores.html">Cookies y Alfajores</a>
                                     <a className="dropdown-item disabled" href="budines-y-muffins.html">Budines y Muffins</a>
                                     <a className="dropdown-item disabled" href="cuadrados.html">Cuadrados</a>

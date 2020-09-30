@@ -1,30 +1,20 @@
-import React, { useEffect, useContext } from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import { CartContext } from '../../context/cartContext';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Item = ({ product }) => {
-  const { id, name, price, measure, stock, image, description } = product;
-  const [cart, setCart] = useContext(CartContext);
-
-  const addToCart = () => {
-    const item = {id, name, price, measure};
-    setCart(currentCart => [...currentCart, item])
-  }
-
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  const { id, name, price, measure, image } = product;
 
   return (
     <React.Fragment>
-      <img src={image} className="col-12 col-md-8" alt={name} />
-      <div className="product-info col-12 col-md-4 d-flex flex-column justify-content-around align-items-center">
-        <p className="product-description text-justify p-3">{description}</p>
-        <h5 className="product-price">${price} por {measure}</h5>
-        <div className="product-shop">
-        <ItemCount initial={1} min={0} max={stock} />
-        <button className="btn" onClick={addToCart}>Agregar al carrito</button>
-        </div>
+      <NavLink to={{pathname: `/products/${id}`, state: {test:'test'}}}>
+        <img src={image} className="card-img-top" alt={name} />
+      </NavLink>
+      <h4 className="card-title p-2">{name}</h4>
+      <div className="precio-producto d-flex flex-wrap justify-content-around align-items-center p-2">
+        <h5 className="card-text">${price} por {measure}</h5>
+        <NavLink to={{pathname: `/products/${id}`}} className="btn">
+            COMPRAR
+        </NavLink>
       </div>
     </React.Fragment>
   );

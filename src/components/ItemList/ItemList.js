@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemListGeneral from "../ItemListGeneral/ItemListGeneral";
+import Item from "../Item/Item";
 import Loading from "../Loading/Loading";
 import dataProducts from "../../data/data";
 
@@ -34,7 +34,7 @@ const ItemList = ({ onAdd }) => {
       <div className="product-grid row">
         {products.map((product) => (
           <div key={product.id} className="text-center col-12 col-md-4 mb-5">
-            <ItemListGeneral product={product} />
+            <Item product={product} />
           </div>
         ))}
       </div>
