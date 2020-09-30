@@ -1,20 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import { CartContext } from '../../context/cartContext';
+import AddToCartButton from "../AddToCartButton/AddToCartButton";
 
 const ItemDetail = ({ product }) => {
-  const { id, name, price, measure, stock, image, description } = product;
-  const [cart, setCart] = useContext(CartContext);
+  const { name, price, measure, stock, image, description } = product;
   const [count, setCount] = useState(1);
-
-  const addToCart = () => {
-    const item = {id, name, price, measure};
-    setCart(currentCart => [...currentCart, item])
-  }
-
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
   return (
     <React.Fragment>
@@ -24,7 +14,7 @@ const ItemDetail = ({ product }) => {
         <h5 className="product-price">${price} por {measure}</h5>
         <div className="product-shop">
         <ItemCount min={0} max={stock} count={count} setCount={setCount} />
-        <button className="btn" onClick={addToCart}>Agregar al carrito</button>
+        <AddToCartButton product={product} count={count} />
         </div>
       </div>
     </React.Fragment>

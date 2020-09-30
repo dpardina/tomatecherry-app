@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-import Loading from "../Loading/Loading";
+import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
+import Loading from "../../components/Loading/Loading";
 import dataProducts from "../../data/data";
 import './Product.scss';
 

@@ -8,7 +8,7 @@ import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import Products from "./pages/Products/Products";
-import Product from "./components/Product/Product";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (

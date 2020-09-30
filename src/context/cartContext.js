@@ -5,10 +5,8 @@ export const CartContext = React.createContext([]);
 export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
 
-  const sumaProductos = () => {}
-  
   return (
-    <CartContext.Provider value={[cart, setCart, sumaProductos]}>
+    <CartContext.Provider value={[cart, setCart]}>
       {props.children}
     </CartContext.Provider>
   )
