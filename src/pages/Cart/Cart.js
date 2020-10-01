@@ -3,13 +3,21 @@ import { CartContext } from '../../context/cartContext';
 import { NavLink } from 'react-router-dom';
 import './Cart.scss';
 
-export default function Cart(props) {
+export default function Cart() {
     const [cart] = useContext(CartContext);
 
-    const subtotal = (amount, price) => {
-        let sub = amount*price;
+    const subtotal = (count, price) => {
+        let sub = count*price;
         return sub;
     }
+
+    // const total = () => {
+
+    // }
+
+    // const delete = () => {
+
+    // }
 
     return (
         <div id="cart">
@@ -21,8 +29,8 @@ export default function Cart(props) {
 
             {(cart.length === 0) ? (
                 <div className="container">
-                    <p>No hay Productos en el carrito.</p>
-                    <NavLink to={'/tortasytartas'} className="btn">Ver Productos</NavLink>
+                    <p>No hay productos en el carrito.</p>
+                    <NavLink to={'/products'} className="btn">Ver Productos</NavLink>
                 </div>
             ) : (
             <div>  
@@ -36,9 +44,9 @@ export default function Cart(props) {
                 {cart.map((item) => (
                     <div className="item-carrito row p-3" key={item.id}>
                         <div className="item-name col-4">{item.name}</div>
-                        <div className="item-price col-2">${item.price}</div>
-                        <div className="item-amount col-2">{cart.length} {item.measure}</div>
-                        <div className="item-subtotal col-2">${subtotal(cart.length, item.price)}</div>
+                        <div className="item-price col-2">${item.price} por {item.measure}</div>
+                        <div className="item-amount col-2">{item.count}</div>
+                        <div className="item-subtotal col-2">${subtotal(item.count, item.price)}</div>
                         <div className="item-delete col-2">
                             <button><i className="fas fa-trash"></i></button>
                         </div>

@@ -6,7 +6,7 @@ function AddToCartButton({ product, count }) {
     const [cart, setCart] = useContext(CartContext)
 
     const AddToCart = () => {
-        const item = {id, name, price, measure};
+        const item = {id, name, price, measure, count};
         setCart(currentCart => [...currentCart, item])
     }
     
