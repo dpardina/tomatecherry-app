@@ -1,15 +1,8 @@
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
+import { firebaseConfig } from '../config/firebase.config';
 
-const app = firebase.initializeApp({
-    apiKey: ,
-    authDomain: ,
-    databaseURL: ,
-    projectId: ,
-    storageBucket: ,
-    messagingSenderId: ,
-    appId: 
-})
+const app = firebase.initializeApp(firebaseConfig);
 
 export function getFirebase() {
     return app;

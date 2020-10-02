@@ -34,7 +34,7 @@ const Product = () => {
     setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection("items");
-    const item = itemCollection.doc(itemId);
+    const item = itemCollection.doc(id);
 
     item.get().then((doc) => {
       if(!doc.exists) {
