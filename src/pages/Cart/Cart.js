@@ -43,7 +43,7 @@ export default function Cart() {
                 </div>
                 {cart.map((item) => (
                     <div className="item-carrito row p-3" key={item.id}>
-                        <div className="item-name col-4">{item.name}</div>
+                        <div className="item-title col-4">{item.title}</div>
                         <div className="item-price col-2">${item.price} por {item.measure}</div>
                         <div className="item-amount col-2">{item.count}</div>
                         <div className="item-subtotal col-2">${subtotal(item.count, item.price)}</div>
