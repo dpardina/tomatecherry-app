@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import { getFirestore } from "../../firebase";
 import Item from "../Item/Item";
 import Loading from "../Loading/Loading";
 
-const ItemList = () => {
+const ItemListCategory = () => {
+  const { categoryId } = useParams();
   const [items, setItems] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -11,7 +13,8 @@ const ItemList = () => {
     setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection("items");
-    itemCollection.get()
+    const cat = itemCollection.where('categoryId', '==', categoryId);
+    cat.get()
     .then((querySnapshot) => {
       if(querySnapshot.size === 0) {
         console.log("No results!");
@@ -26,7 +29,7 @@ const ItemList = () => {
     .finally(() => {
       setLoading(false);
     })
-  }, []);
+  }, [categoryId]);
 
 
   return (
@@ -46,4 +49,4 @@ const ItemList = () => {
   );
 };
 
-export default ItemList;
+export default ItemListCategory;

@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
+import Categories from "./pages/Categories/Categories";
 import Products from "./pages/Products/Products";
 import Product from "./pages/Product/Product";
 
@@ -19,7 +20,8 @@ function App() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/products' component={Products} />
-            <Route path='/products/:id' component={Product} />
+            <Route exact path='/categories/:categoryId' component={Categories} />
+            <Route exact path='/products/:id' component={Product} />
             <Route path='/cart' component={Cart} />
             <Route path='/wishlist' component={Wishlist} />
           </Switch>

@@ -1,10 +1,10 @@
 import React from 'react';
-import ItemList from "../../components/ItemList/ItemList";
-import './Products.scss';
+import ItemListCategory from "../../components/ItemListCategory/ItemListCategory";
+import './Categories.scss';
 
-const Products = () => {
+const Categories = () => {
     return (
-        <div id="products">   
+        <div id="categories">   
             <div className="productos mb-5">
                 <div className="container">
                     <div className="row">
@@ -13,11 +13,11 @@ const Products = () => {
                             <p>Hacé tu pedido con 48 horas de anticipación.</p>
                         </div>
                     </div>
-                    <ItemList />
+                    <ItemListCategory />
                 </div>
             </div>
         </div>    
     );
 }
 
-export default Products;
+export default Categories;

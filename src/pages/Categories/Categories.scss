@@ -1,7 +1,7 @@
 /* Colors */
 @import '../../assets/styles/colors';
 
-#products {
+#categories {
     .productos {
         position: relative;
         padding-top: 15vh;
@@ -48,7 +48,7 @@
 }
 
 @media only screen and (min-width: 768px ) {
-    #products {
+    #categories {
         .productos {
             .product-grid {
                 h4 {
@@ -70,7 +70,7 @@
 }
 
 @media only screen and (min-width: 992px ) {
-    #products {
+    #categories {
         .productos {
             .product-grid {
                 h4 {

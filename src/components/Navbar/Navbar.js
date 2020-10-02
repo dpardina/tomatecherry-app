@@ -5,7 +5,7 @@ import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import logo from '../../assets/img/logo.png';
 import './NavBar.scss';
 
-const Navbar = (props) => {
+const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg fixed-top" id="nav">
             <div className="container">
@@ -23,11 +23,11 @@ const Navbar = (props) => {
                                     <span>Productos</span>
                                 </a>
                                 <div className="dropdown-menu">
-                                    <NavLink to={'/products'} className="dropdown-item">Tortas y Tartas</NavLink>
-                                    <a className="dropdown-item disabled" href="cookies-y-alfajores.html">Cookies y Alfajores</a>
+                                    <NavLink to={'/categories/tortas'} className="dropdown-item">Tortas y Tartas</NavLink>
+                                    <NavLink to={'/categories/cookies'} className="dropdown-item">Cookies y Alfajores</NavLink>
                                     <a className="dropdown-item disabled" href="budines-y-muffins.html">Budines y Muffins</a>
                                     <a className="dropdown-item disabled" href="cuadrados.html">Cuadrados</a>
-                                    <a className="dropdown-item disabled" href="panaderia.html">Panadería</a>
+                                    <NavLink to={'/categories/panaderia'} className="dropdown-item">Panadería</NavLink>
                                     <div className="dropdown-divider" />
                                     <a className="dropdown-item disabled" href="cherry-mix.html">Cherry Mix</a>
                                     <a className="dropdown-item disabled" href="desayunos.html">Desayunos</a>
