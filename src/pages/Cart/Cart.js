@@ -33,7 +33,6 @@ export default function Cart() {
                     <NavLink to={'/products'} className="btn">Ver Productos</NavLink>
                 </div>
             ) : (
-            <div>  
             <div className="container items-carrito-container">
                 <div className="item-carrito-header row p-3">
                     <h5 className="col-4">Producto</h5>
@@ -52,13 +51,18 @@ export default function Cart() {
                         </div>
                     </div>
                 ))}
-            </div>
-            <div className="container text-right mt-5">
-                <h4>Total: $</h4> 
-            </div>
-            <div className="container text-right mt-5">
-                <button className="btn">Checkout</button>
-            </div>
+                <form className="orden-compra form-group row p-3 mt-5">
+                    <div className="orden-compra-datos col-6 d-flex flex-column">
+                        <h4 className="p-2">Orden de Compra</h4>
+                        <input className="form-control m-1 p-2" type="text" placeholder="Nombre" required />
+                        <input className="form-control m-1 p-2" type="text" placeholder="Teléfono" required />
+                        <input className="form-control m-1 p-2" type="email" placeholder="Correo Electrónico" required />
+                    </div>
+                    <div className="orden-compra-total col-6 d-flex flex-column my-auto">
+                        <h4 className="p-2 align-self-center">Total: $</h4> 
+                        <button className="btn align-self-center" type="submit">Checkout</button>
+                    </div>
+                </form>
             </div>
             )}
         </div>
